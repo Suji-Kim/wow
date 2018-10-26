@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>돌려까기</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+	<style type="text/css">
+	
+	 img{ display: block; }
+
+	 body{ }
+	 section{ width:1920px; background: yellow; position: relative;}
+	 #sectionA{ height: 1800px; background: url(./img/a1.jpg); background-size: 100% auto;}
+	 #sectionB{ height: 1700px; background: url(./img/a2.jpg); background-size: 100% auto;}
+	 #sectionC{ height: 1000px; background: url(./img/a3.jpg); background-size: 100% auto;}
+
+	 .animated{ background-size:100% auto; position: absolute; }
+
+
+	 #circleb{width:303px; height:303px; background:yellow; position: absolute; top:210px; left:962px; border-radius: 50%;animation: fall 2s forwards paused;}
+	 #circlec{width:400px; height:400px; background:orange; position: absolute; top:1000px; left:1265px; border-radius: 50%;opacity: 0.5;animation: fall 2s forwards;}
+	 #circlec:hover {transform: rotateX(100deg);}
+	 
+	 #circled{width:303px; height:303px; background:yellow; position: absolute; top:873px; left:962px; border-radius: 50%;}
+
+
+
+	 @keyframes fall{
+	 	from{top:-200px;}
+	 	to{top:210px;}
+	 }
+
+	
+		#monitor{ width:200px; height:50px; background: red; color: white; line-height: 50px; text-align: center; position: fixed; top:0; right:0; z-index: 9999;}
+	</style>
+</head>
+<body>
+	<div id="monitor"></div>
+	<section id="sectionA">
+		<img id="cutter" class="animated" src="./img/a6.png" style="top:1000px; left:1250px;">
+		<img id="apple" class="animated" src="./img/a5.gif" style="top:1350px; left:600px;">
+
+
+		
+	</section>
+	<section id="sectionB">
+		<div id="circleb"></div>
+		<div id="circlec"></div>
+		<div id="circled"></div>
+
+
+
+
+	</section>
+	<section id="sectionC">
+		<img id="record" class="animated" src="./img/a4.gif" style="top:50px; left:600px;">
+
+
+
+
+	</section>
+	<script type="text/javascript">
+	window.onscroll = function(){
+		var top = document.documentElement.scrollTop;
+		monitor.innerHTML = top + "px";
+
+		if( top > 200){
+			circleb.style.animationPlayState = "running";
+
+		}else if(top > 1500){
+			circlec.style.animationPlayState = "running";
+
+		}else if(top > 1000){
+
+		}else if(top > 3000){
+			//do something;
+		}
+
+		if( top > 300 && top < 500){
+			// do something;
+		}
+
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>물귀신유형</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+	<style type="text/css">
+	
+	 img{width:100%;}
+
+	 body{ }
+	 section{ width:1920px; background: yellow; position: relative;}
+	 #sectionA{ height: 2300px; background: url(./img/c1.jpg); background-size: 100% auto;}
+	 #sectionB{ height: 2300px; background: url(./img/c2.jpg); background-size: 100% auto;}
+	 
+	
+		#monitor{ width:200px; height:50px; background: red; color: white; line-height: 50px; text-align: center; position: fixed; top:0; right:0; z-index: 9999;}
+	</style>
+</head>
+<body>
+	<div id="monitor"></div>
+	<section id="sectionA">
+		
+	</section>
+	<section id="sectionB">
+
+
+	</section>
+	<script type="text/javascript">
+	window.onscroll = function(){
+		var top = document.documentElement.scrollTop;
+		monitor.innerHTML = top + "px";
+
+		if( top > 200){
+			circleb.style.animationPlayState = "running";
+
+		}else if(top > 1500){
+			circlec.style.animationPlayState = "running";
+
+		}else if(top > 1000){
+
+		}else if(top > 3000){
+			//do something;
+		}
+
+		if( top > 300 && top < 500){
+			// do something;
+		}
+
+	}
+	</script>
+</body>
+</html>

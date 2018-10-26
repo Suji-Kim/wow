@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>약점공략형</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+	<style type="text/css">
+	
+	 img{width:100%;}
+
+	 body{ }
+	 section{ width:1920px; background: yellow; position: relative;}
+	 #sectionA{ height: 1500px; background: url(./img/f1.jpg); background-size: 100% auto;}
+	 #sectionB{ height: 1600px; background: url(./img/f2.jpg); background-size: 100% auto;}
+	 #sectionC{ height: 1909px; background: url(./img/f3.jpg); background-size: 100% auto;}
+	 #arrow{width:280px; height:280px;  background: url(./img/arrow.png); background-size: 100% auto; position: absolute; top:400px; left:550px; animation: fall 2s forwards paused;}
+	 
+	 @keyframes fall{
+	 	from{top:-200px;}
+	 	to{top:400px;}
+	 }
+
+		#monitor{ width:200px; height:50px; background: red; color: white; line-height: 50px; text-align: center; position: fixed; top:0; right:0; z-index: 9999;}
+	</style>
+</head>
+<body>
+	<div id="monitor"></div>
+	<section id="sectionA">
+			<div id="arrow"></div>
+
+		
+	</section>
+	<section id="sectionB">
+
+
+	</section>
+	<section id="sectionC">
+
+	</section>
+	<script type="text/javascript">
+	window.onscroll = function(){
+		var top = document.documentElement.scrollTop;
+		monitor.innerHTML = top + "px";
+
+		if( top > 200){
+			arrow.style.animationPlayState = "running";
+
+		}else if(top > 1500){
+
+		}else if(top > 1000){
+
+		}else if(top > 3000){
+			//do something;
+		}
+
+		if( top > 300 && top < 500){
+			// do something;
+		}
+
+	}
+	</script>
+</body>
+</html>

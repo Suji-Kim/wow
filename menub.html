@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>의견묵살형</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+	<style type="text/css">
+	
+	 img{width:100%;}
+
+	 body{ }
+	 section{ width:1920px; background: yellow; position: relative;}
+	 #sectionA{ height: 1900px; background: url(./img/b1.jpg); background-size: 100% auto;}
+	 #sectionB{ height: 1395px; background: url(./img/b2.jpg); background-size: 100% auto;}
+	 
+	 #talk1{width:583px; height:156px; background: url(./img/b3.png); background-size: 100% auto; position: absolute; top:754px; left:1027px; animation: a1 1s forwards paused;}
+	 #talk2{width:540px; height:96px; background: url(./img/b4.png); background-size: 100% auto; position: absolute; top:1111px; left:309px; animation: a2 1s forwards paused; }
+	 #talk3{width:350px; height:96px; background: url(./img/b5.png); background-size: 100% auto; position: absolute; top:1305px; left:1259px; animation: a3 1s forwards paused; }
+	 #talk4{width:478px; height:156px; background: url(./img/b6.png); background-size: 100% auto; position: absolute; top:1444px; left:1132px; animation: a4 1s forwards paused;}
+	 #talk5{width:637px; height:156px; background: url(./img/b7.png); background-size: 100% auto; position: absolute; top:1643px; left:972px; animation: a5 1s forwards paused;}
+	 #talk6{width:473px; height:97px; background: url(./img/b8.png); background-size: 100% auto; position: absolute; top:50px; left:309px; animation: a6 1s forwards paused; }
+	 #talk7{width:152px; height:96px; background: url(./img/b9.png); background-size: 100% auto; position: absolute; top:363px; left:309px; animation: a7 1s forwards paused; }
+	 #talk8{width:448px; height:96px; background: url(./img/b10.png); background-size: 100% auto; position: absolute; top:502px; left:309px; animation: a8 1s forwards paused;}
+	 #talk9{width:159px; height:96px; background: url(./img/b11.png); background-size: 100% auto; position: absolute; top:824px; left:1451px; animation: a9 1s forwards paused;}
+
+	@keyframes a1{ from{opacity:0; left:927px;} to{   } }
+	@keyframes a2{ from{opacity:0; left:509px;} to{   } }
+	@keyframes a3{ from{opacity:0; left:1159px;} to{   } }
+	@keyframes a4{ from{opacity:0; left:1032px;} to{   } }
+	@keyframes a5{ from{opacity:0; left:872px;} to{   } }
+	@keyframes a6{ from{opacity:0; left:409px;} to{   } }
+	@keyframes a7{ from{opacity:0; left:409px;} to{   } }
+	@keyframes a8{ from{opacity:0; left:409px;} to{   } }
+	@keyframes a9{ from{opacity:0; left:1351px;} to{   } }
+
+
+
+
+
+
+		#monitor{ width:200px; height:50px; background: red; color: white; line-height: 50px; text-align: center; position: fixed; top:0; right:0; z-index: 9999;}
+	}
+	</style>
+</head>
+<body>
+	<div id="monitor"></div>
+	<section id="sectionA">	
+		<div id="talk1"></div>
+		<div id="talk2"></div>
+		<div id="talk3"></div>
+		<div id="talk4"></div>
+		<div id="talk5"></div>
+	
+	</section>
+
+	<section id="sectionB">
+		<div id="talk6"></div>
+		<div id="talk7"></div>
+		<div id="talk8"></div>
+		<div id="talk9"></div>
+
+	
+
+	</section>
+	<script type="text/javascript">
+	window.onscroll = function(){
+		var top = document.documentElement.scrollTop + document.body.scrollTop;
+		monitor.innerHTML = top + "px";
+
+		if( top < 400){
+			
+		}else if(top < 600){
+			talk1.style.animationPlayState = "running";
+		}else if(top < 900){
+			talk2.style.animationPlayState = "running";
+		}else if(top < 1000){
+			talk3.style.animationPlayState = "running";
+
+		}else if(top < 1200){
+			talk4.style.animationPlayState = "running";
+
+		}else if(top < 1300){
+			talk5.style.animationPlayState = "running";
+		}else if(top < 1500){
+
+		}else if(top < 1600){
+			talk6.style.animationPlayState = "running";
+		}else if(top < 1800){
+
+		}else if(top < 1900){
+			talk7.style.animationPlayState = "running";
+
+		}else if(top < 2000){
+			talk8.style.animationPlayState = "running";
+		}else if(top < 2200){
+
+		}else if(top < 2300){
+			talk9.style.animationPlayState = "running";
+
+		}
+
+
+
+	}
+	</script>
+</body>
+</html>
